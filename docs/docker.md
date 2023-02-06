@@ -206,7 +206,7 @@ Synology NAS:
     ```
    Keep the session open, we'll need it again in a moment.
 4. On your workstation, download and extract
-   [the latest scanservjs release](https://github.com/sbs20/scanservjs/releases/latest).
+   [the latest scanservjs release](https://github.com/sbs20/scanservjs/releases/latest). (Broken as of 2/4/23: release/latest doesn't contain the Dockerfile, and even after copying the Dockerfile from source, the `docker-compose up` command would still fail because Dockerfile expect a different directory structure: client and server under packages folder; package*.json under client and server. To fix it, copying the source folder instead of using the release drop.)
 5. In the repository root, create a text file named `docker-compose.yml` with
    the following content:
     ```yaml
